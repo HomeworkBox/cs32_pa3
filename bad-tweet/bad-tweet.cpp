@@ -21,6 +21,12 @@ tweet::tweet() : _text(0), _len(0) {
 	_timestamp = time(NULL);
 }
 
+//tweet::tweet(const tweet& other){
+//    _text = other._text;
+//    _len = other._len;
+//    _timestamp = other._timestamp;
+//}
+
 tweet::~tweet() {
 	delete [] _text;
 }
@@ -33,7 +39,8 @@ void tweet::set_text(const char *str) {
 	if(_len > MaxTextLen)
 		_len = MaxTextLen;
 
-	strcpy(_text, str);
+    _text = new char[_len+1];
+    strcpy(_text, str);
 	_text[_len] = '\0';
 }
 
@@ -68,5 +75,7 @@ int main() {
 		ptweets[i]->print();
 
 	delete proto;
+    for(int i = 0; i < n; i++)
+        delete ptweets[i];
 	delete [] ptweets;
 }
