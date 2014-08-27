@@ -6,6 +6,11 @@ using namespace std;
 int main() {
 	using algebra::qnion;
 
+    algebra::cplex d(1, -1);
+    d=-d;
+    d=~d;
+    
+    
 	qnion a, b;
 	cout << "Input first q-nion (e.g., 3 0 5.8 -2): ";
 	cin >> a;

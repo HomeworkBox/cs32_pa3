@@ -13,27 +13,75 @@ qnion::qnion(const cplex &a, const cplex &b)
 	: _a(a), _b(b) {
 }
 
-// cplex qnion::a() const { ... }
+cplex qnion::a() const {
+    return _a;
+}
 
-// void qnion::a(const cplex &a) { ... }
+void qnion::a(const cplex &a) {
+    _a = a;
+}
 
-// cplex qnion::b() const { ... }
+cplex qnion::b() const {
+    return _b ;
+}
 
-// void qnion::b(const cplex &b) { ... }
+void qnion::b(const cplex &b) {
+    _b = b;
+}
 
-// qnion qnion::operator-() const { ... }
+qnion qnion::operator-() const {
+    qnion temp;
+    temp.a(-(_a));
+    temp.b(-(_b));
+    return temp;
+}
 
-// qnion qnion::operator~() const { ... }
+qnion qnion::operator~() const {
+    qnion temp;
+    temp.a(~(_a));
+    temp.b(-(_b));
+    return temp;
+}
 
-// qnion algebra::operator+(const qnion &left, const qnion &right) { ... }
+qnion algebra::operator+(const qnion &left, const qnion &right) {
+    qnion temp;
+    temp.a(left.a() + right.a());
+    temp.b(left.b() + right.b());
+    return temp;
+}
 
-// qnion algebra::operator-(const qnion &left, const qnion &right) { ... }
+qnion algebra::operator-(const qnion &left, const qnion &right) {
+    qnion temp;
+    temp.a(left.a() - right.a());
+    temp.b(left.b() - right.b());
+    return temp;
+}
  
-// qnion algebra::operator*(const qnion &left, const qnion &right) { ... }
+qnion algebra::operator*(const qnion &left, const qnion &right) {
+    qnion temp;
+    temp.a(left.a() * right.a() -
+              left.b() * ~(right.b()));
+    temp.b(left.a() * right.b() +
+              left.b() * ~(right.a()));
+    return temp;
+}
 
-// bool algebra::operator==(const qnion &left, const qnion &right) { ... }
+bool algebra::operator==(const qnion &left, const qnion &right) {
+    if (left.a() == right.a() &&
+        left.b() == right.b()) {
+        return true;
+    }
+    return false;
+}
 
-// bool algebra::operator!=(const qnion &left, const qnion &right) { ... }
+bool algebra::operator!=(const qnion &left, const qnion &right) {
+    if (left.a() != right.a() ||
+        left.b() != right.b()) {
+        return true;
+    }
+    return false;
+
+}
 
 ostream& algebra::operator<<(ostream& os, const qnion &q) {
 	return os << "{" << q.a() << q.b() << "}";

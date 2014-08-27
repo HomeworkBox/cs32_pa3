@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F8C0C6419AC3E3600835999 /* bad-tweet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C0C6319AC3E3600835999 /* bad-tweet.cpp */; };
+		2F08309019AD1F4300B0286A /* cplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F08308B19AD1F4300B0286A /* cplex.cpp */; };
+		2F08309119AD1F4300B0286A /* example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F08308D19AD1F4300B0286A /* example.cpp */; };
+		2F08309519AD3E5500B0286A /* qnion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F08308E19AD1F4300B0286A /* qnion.cpp */; };
+		2F08309619AD3E5500B0286A /* qnion.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F08308F19AD1F4300B0286A /* qnion.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F08308B19AD1F4300B0286A /* cplex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cplex.cpp; path = ../../qnion/cplex.cpp; sourceTree = "<group>"; };
+		2F08308C19AD1F4300B0286A /* cplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cplex.h; path = ../../qnion/cplex.h; sourceTree = "<group>"; };
+		2F08308D19AD1F4300B0286A /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = example.cpp; path = ../../qnion/example.cpp; sourceTree = "<group>"; };
+		2F08308E19AD1F4300B0286A /* qnion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qnion.cpp; path = ../../qnion/qnion.cpp; sourceTree = "<group>"; };
+		2F08308F19AD1F4300B0286A /* qnion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qnion.h; path = ../../qnion/qnion.h; sourceTree = "<group>"; };
 		2F8C0C6319AC3E3600835999 /* bad-tweet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "bad-tweet.cpp"; path = "../../bad-tweet/bad-tweet.cpp"; sourceTree = "<group>"; };
 		2FDDD19619AC2C1C00165D66 /* pa3x */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pa3x; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDDD19919AC2C1C00165D66 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -58,6 +66,11 @@
 		2FDDD19819AC2C1C00165D66 /* pa3x */ = {
 			isa = PBXGroup;
 			children = (
+				2F08308C19AD1F4300B0286A /* cplex.h */,
+				2F08308B19AD1F4300B0286A /* cplex.cpp */,
+				2F08308D19AD1F4300B0286A /* example.cpp */,
+				2F08308E19AD1F4300B0286A /* qnion.cpp */,
+				2F08308F19AD1F4300B0286A /* qnion.h */,
 				2F8C0C6319AC3E3600835999 /* bad-tweet.cpp */,
 				2FDDD19919AC2C1C00165D66 /* main.cpp */,
 			);
@@ -120,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F8C0C6419AC3E3600835999 /* bad-tweet.cpp in Sources */,
+				2F08309519AD3E5500B0286A /* qnion.cpp in Sources */,
+				2F08309619AD3E5500B0286A /* qnion.h in Sources */,
+				2F08309119AD1F4300B0286A /* example.cpp in Sources */,
+				2F08309019AD1F4300B0286A /* cplex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
